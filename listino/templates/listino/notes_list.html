@@ -1,0 +1,11 @@
+{% extends "listino/base.html" %}
+
+{% block content %}
+    <ul>
+        {% for id, note in lists.items %}
+        <li>
+            <div><a href="/listino/{{ id }}">{{note.title}}</a></div>
+        </li>
+        {% endfor %}
+    </ul>
+{% endblock %}

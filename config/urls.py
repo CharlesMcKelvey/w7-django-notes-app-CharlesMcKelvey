@@ -18,7 +18,7 @@ from django.urls import path
 from listino import views
 
 urlpatterns = [
-    path('', views.home_page, name="home_page"),
+    path('', views.notes_list, name="notes_list"),
     path('listino/<id>/', views.note_details, name="note_details"),
     path('admin/', admin.site.urls),
 ]

@@ -1,18 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://cdn.shoelace.style/1.0.0-beta24/shoelace.css">
-    <title>Listino</title>
-</head>
-<body>
-    <div class="container">
-        <h1>{{ note.title }}</h1>
-        <p>{{ note.body }}</p>
-
-        <p><a href="/">Go Home</a></p>
-    </div>
-</body>
-</html>
+{% extends "listino/base.html" %}
+<!-- This above will give you the HTML, BODY, and other general tags needed for each page -->
+{% block content %}
+    <h3>{{ note.title }}</h3>
+    <p>{{ note.body }}</p>
+{% endblock %}

@@ -3,11 +3,11 @@ from listino.data import NOTES
 # Create your views here.
 
 
-def home_page(request):
+def notes_list(request):
     """
     This is your landing page for your app
     """
-    return render(request, 'listino/home_page.html', {
+    return render(request, 'listino/notes_list.html', {
         'lists': NOTES,
     })
 
