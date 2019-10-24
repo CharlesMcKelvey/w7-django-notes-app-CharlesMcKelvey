@@ -2,10 +2,12 @@
 
 {% block content %}
     <ul>
-        {% for id, note in lists.items %}
+        {% for note in notes %}
         <li>
-            <div><a href="/listino/{{ id }}">{{note.title}}</a></div>
+            <a href="listino/{{ note.pk }}">{{ note.title }}</a>
         </li>
         {% endfor %}
     </ul>
+    
+    <a href="/listino/create_note">Create Note</a>
 {% endblock %}

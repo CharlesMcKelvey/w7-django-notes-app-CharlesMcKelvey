@@ -19,6 +19,7 @@ from listino import views
 
 urlpatterns = [
     path('', views.notes_list, name="notes_list"),
-    path('listino/<id>/', views.note_details, name="note_details"),
-    path('admin/', admin.site.urls),
+    path('listino/<int:pk>/', views.note_details, name="note_details"),
+    path('listino/create_note/', views.create_note, name="create_note"),
+    path('admin/', admin.site.urls)
 ]
