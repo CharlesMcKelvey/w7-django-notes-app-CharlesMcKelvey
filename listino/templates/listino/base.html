@@ -10,15 +10,17 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://cdn.shoelace.style/1.0.0-beta24/shoelace.css">
     <link rel="stylesheet" href="{% static 'listino.css' %}">
+    
     <title>Listino</title>
 </head>
 
 <body>
     <div class="container">
-        <h1><a href="/">Listino</a></h1>
+        <h1 class="logo-container"><a class="logo" href="/">Listino</a></h1>
         {% block content %}
         {% endblock %}
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.js" defer></script>
 </body>
 
 </html>

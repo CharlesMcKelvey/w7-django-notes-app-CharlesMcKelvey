@@ -1,0 +1,22 @@
+{% extends 'listino/base.html' %}
+
+{% block content %}
+<h2>Create Your Note</h2> 
+<form action="" method="POST">
+    <!-- Read into CSRF Token -->
+    {% csrf_token %}
+    {{form}}
+    <div class="input-field {% if form.errors%} input-error {% endif %}"> 
+        <!-- Given we have the field in our for loop, we will use that here -->
+        <!-- Label tag is a method of Django for manually adding information. The link below will explain-->
+        <!-- https://docs.djangoproject.com/en/2.2/topics/forms/ CMD+F = label_tag() -->
+        {{ field.label_tag}}
+        {% for error in form.errors %}
+        <div class="text-danger"><small>{{error}}</small></div>
+        {% endfor %}
+        <!-- Now this is what the actual field is. The title will be first, then description -->
+        
+    </div>
+    <button type="submit">Create note</button>
+</form>
+{% endblock %}

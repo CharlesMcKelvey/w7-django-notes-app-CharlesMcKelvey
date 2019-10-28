@@ -21,5 +21,7 @@ urlpatterns = [
     path('', views.notes_list, name="notes_list"),
     path('listino/<int:pk>/', views.note_details, name="note_details"),
     path('listino/create_note/', views.create_note, name="create_note"),
+    path('listino/<int:pk>/edit_note', views.edit_note, name="edit_note"),
+    path('listino/<int:pk>/delete_note', views.delete_note, name="delete_note"),
     path('admin/', admin.site.urls)
 ]

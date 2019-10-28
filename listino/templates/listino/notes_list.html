@@ -1,10 +1,13 @@
 {% extends "listino/base.html" %}
 
 {% block content %}
-    <ul>
+    <ul class="notes-list">
         {% for note in notes %}
-        <li>
-            <a href="listino/{{ note.pk }}">{{ note.title }}</a>
+        <li class="note">
+            <a class="note-link" href="listino/{{ note.pk }}">{{ note.title }}</a>
+            <div class="actions">
+                <a class="delete" href="listino/{{ note.pk }}/delete_note">Delete</a>
+            </div>
         </li>
         {% endfor %}
     </ul>
